@@ -18,8 +18,8 @@
  * For more information on hooks, actions, and filters, @link https://codex.wordpress.org/Plugin_API
  *
  * @package WordPress
- * @subpackage Twenty_Twelve
- * @since Twenty Twelve 1.0
+ * @subpackage AMSdemo
+ * @since AMSdemo 1.0
  */
 
 // Set up the content width value based on the theme's design and stylesheet.
@@ -41,27 +41,19 @@ if ( ! isset( $content_width ) )
  *
  * @since Twenty Twelve 1.0
  */
-function twentytwelve_setup() {
-	/*
-	 * Makes Twenty Twelve available for translation.
-	 *
-	 * Translations can be added to the /languages/ directory.
-	 * If you're building a theme based on Twenty Twelve, use a find and replace
-	 * to change 'twentytwelve' to the name of your theme in all the template files.
-	 */
+function amstheme_setup() {
+	//Makes AMSdemo available for translation.
 	load_theme_textdomain( 'amstraslate', get_template_directory() . '/languages' );
 
 	// This theme styles the visual editor with editor-style.css to match the theme style.
 	add_editor_style();
 
-	// Adds RSS feed links to <head> for posts and comments.
-	add_theme_support( 'automatic-feed-links' );
-
 	// This theme supports a variety of post formats.
+	// aside 獨白 image 圖片 link 連結 quote 引文 status 狀態
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'link', 'quote', 'status' ) );
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menu( 'primary', __( 'Primary Menu', 'twentytwelve' ) );
+	register_nav_menu( 'primary', __( 'Primary Menu', 'amstraslate' ) );
 
 	/*
 	 * This theme supports custom background color and image,
@@ -75,7 +67,7 @@ function twentytwelve_setup() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 624, 9999 ); // Unlimited height, soft crop
 }
-add_action( 'after_setup_theme', 'twentytwelve_setup' );
+add_action( 'after_setup_theme', 'amstheme_setup' );
 
 /**
  * Add support for a custom header image.
@@ -238,9 +230,9 @@ add_filter( 'wp_page_menu_args', 'twentytwelve_page_menu_args' );
  */
 function twentytwelve_widgets_init() {
 	register_sidebar( array(
-		'name' => __( 'Main Sidebar', 'twentytwelve' ),
+		'name' => __( 'Main Sidebar', 'amstraslate' ),
 		'id' => 'sidebar-1',
-		'description' => __( 'Appears on posts and pages except the optional Front Page template, which has its own widgets', 'twentytwelve' ),
+		'description' => __( 'Appears on posts and pages except the optional Front Page template, which has its own widgets', 'amstraslate' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widget-title">',
@@ -248,9 +240,9 @@ function twentytwelve_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'First Front Page Widget Area', 'twentytwelve' ),
+		'name' => __( 'First Front Page Widget Area', 'amstraslate' ),
 		'id' => 'sidebar-2',
-		'description' => __( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'twentytwelve' ),
+		'description' => __( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'amstraslate' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widget-title">',
@@ -258,9 +250,9 @@ function twentytwelve_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => __( 'Second Front Page Widget Area', 'twentytwelve' ),
+		'name' => __( 'Second Front Page Widget Area', 'amstraslate' ),
 		'id' => 'sidebar-3',
-		'description' => __( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'twentytwelve' ),
+		'description' => __( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'amstraslate' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widget-title">',

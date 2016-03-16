@@ -1,12 +1,11 @@
 <?php
 /**
  * The Header template for our theme
- *
  * Displays all of the <head> section and everything up till <div id="main">
  *
  * @package WordPress
- * @subpackage Twenty_Twelve
- * @since Twenty Twelve 1.0
+ * @subpackage AMSdemo
+ * @since AMSdemo 1.0
  */
 ?><!DOCTYPE html>
 <!--[if IE 7]>
@@ -40,7 +39,7 @@
 		</hgroup>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></button>
+			<button class="menu-toggle"><?php _e( 'Menu', 'amstraslate' ); ?></button>
 			<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
