@@ -2,25 +2,28 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Twenty Twelve 1.9\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/twentytwelve\n"
-"POT-Creation-Date: 2015-12-08 15:15:37+00:00\n"
+"Project-Id-Version: AMSdemo 1.0\n"
+"Report-Msgid-Bugs-To: https://technologyofkevin.com\n"
+"POT-Creation-Date: 2016-03-16 17:08+0800\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-03-16 17:09+0800\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.7\n"
+"Last-Translator: 韋佳均 <gra230434@gmail.com>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: zh_TW\n"
 
 #: 404.php:17
 msgid "This is somewhat embarrassing, isn&rsquo;t it?"
-msgstr ""
+msgstr "我們碰到了一點問題"
 
 #: 404.php:21
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr ""
+msgstr "看來您要的資料未能找到，煩請重新查詢。"
 
 #: archive.php:29
 msgid "Daily Archives: %s"
@@ -64,7 +67,6 @@ msgstr ""
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
-msgstr[1] ""
 
 #: comments.php:42
 msgid "Comment navigation"
@@ -139,7 +141,6 @@ msgstr ""
 msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#. #-#-#-#-#  twentytwelve.pot (Twenty Twelve 1.9)  #-#-#-#-#
 #. Author URI of the plugin/theme
 #: footer.php:16
 msgid "https://wordpress.org/"

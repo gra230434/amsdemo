@@ -2,15 +2,15 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Twenty Twelve 1.9\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/twentytwelve\n"
-"POT-Creation-Date: 2015-12-08 15:15:37+00:00\n"
+"Project-Id-Version: AMSdemo 1.0\n"
+"Report-Msgid-Bugs-To: https://technologyofkevin.com\n"
+"POT-Creation-Date: 2016-3-16 12:00:00+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: 韋佳均 <gra230434@gmail.com>\n"
+"Language-Team: \n"
 
 #: 404.php:17
 msgid "This is somewhat embarrassing, isn&rsquo;t it?"
