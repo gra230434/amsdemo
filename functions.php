@@ -81,7 +81,6 @@ require( get_template_directory() . '/inc/custom-header.php' );
  * characters not supported by the font, the font can be disabled.
  *
  * @since Twenty Twelve 1.2
- *
  * @return string Font stylesheet or empty string if disabled.
  */
 function twentytwelve_get_font_url() {
@@ -353,17 +352,16 @@ function twentytwelve_comment( $comment, $args, $depth ) {
 }
 endif;
 
-if ( ! function_exists( 'twentytwelve_entry_meta' ) ) :
+if ( ! function_exists( 'amstheme_entry_meta' ) ) :
 /**
  * Set up post entry meta.
  *
  * Prints HTML with meta information for current post: categories, tags, permalink, author, and date.
- *
- * Create your own twentytwelve_entry_meta() to override in a child theme.
+ * Create your own amstheme_entry_meta() to override in a child theme.
  *
  * @since Twenty Twelve 1.0
  */
-function twentytwelve_entry_meta() {
+function amstheme_entry_meta() {
 	// Translators: used between list items, there is a space after the comma.
 	$categories_list = get_the_category_list( __( ', ', 'twentytwelve' ) );
 
