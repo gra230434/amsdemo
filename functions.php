@@ -258,6 +258,15 @@ function twentytwelve_widgets_init() {
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
+	register_sidebar( array(
+		'name' => __( 'Footer Widget Area', 'amstraslate' ),
+		'id' => 'sidebar-footer',
+		'description' => __( 'For footer video area', 'amstraslate' ),
+		'before_widget' => '<li id="footer_video" class="footer_video">',
+		'after_widget' => '</li>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
 }
 add_action( 'widgets_init', 'twentytwelve_widgets_init' );
 

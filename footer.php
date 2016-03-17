@@ -11,20 +11,8 @@
 ?>
 	</div><!-- #main .wrapper -->
 	<footer id="colophon" role="contentinfo">
-		<div>
-      <video width="300" autoplay loop muted>
-				<source src="<?php echo site_url( '/wp-content/themes/amsdemo/' ) ?>video/demo1_360p.mp4" type="video/mp4">
-				<p>Your browser does not support the video tag.</p>
-			</video>
-			<video width="300" autoplay loop muted>
-				<source src="<?php echo site_url( '/wp-content/themes/amsdemo/' ) ?>video/demo2_360p.mp4" type="video/mp4">
-				<p>Your browser does not support the video tag.</p>
-			</video>
-			<video width="300" autoplay loop muted>
-				<source src="<?php echo site_url( '/wp-content/themes/amsdemo/' ) ?>video/demo3_360p.mp4" type="video/mp4">
-				<p>Your browser does not support the video tag.</p>
-			</video>
-		</div>
+		<?php get_sidebar( 'footer' ); ?>
+
 		<div class="site-info">
 			<p>Recreate by <a href="https://technologyofkevin.com/" title="Developer">Kevin Wei</a></p>
 			<p>Proudly powered by <a href="https://wordpress.org/" title="WordPress">WordPress</a></p>
