@@ -52,7 +52,6 @@ get_header(); ?>
 					 * Filter the author bio avatar size.
 					 *
 					 * @since Twenty Twelve 1.0
-					 *
 					 * @param int $size The height and width of the avatar in pixels.
 					 */
 					$author_bio_avatar_size = apply_filters( 'twentytwelve_author_bio_avatar_size', 68 );

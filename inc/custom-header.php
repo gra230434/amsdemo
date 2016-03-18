@@ -48,18 +48,6 @@ function twentytwelve_custom_header_setup() {
 add_action( 'after_setup_theme', 'twentytwelve_custom_header_setup' );
 
 /**
- * Load our special font CSS file.
- *
- * @since Twenty Twelve 1.2
- */
-function twentytwelve_custom_header_fonts() {
-	$font_url = twentytwelve_get_font_url();
-	if ( ! empty( $font_url ) )
-		wp_enqueue_style( 'twentytwelve-fonts', esc_url_raw( $font_url ), array(), null );
-}
-add_action( 'admin_print_styles-appearance_page_custom-header', 'twentytwelve_custom_header_fonts' );
-
-/**
  * Style the header text displayed on the blog.
  *
  * get_header_textcolor() options: 515151 is default, hide text (returns 'blank'), or any hex value.
