@@ -24,9 +24,9 @@
 				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 			</h1>
 			<?php endif; // is_single() ?>
+
 			<?php // is editor show edit button ?>
 			<?php edit_post_link( __( 'Edit', 'amstraslate' ), '<span class="edit-link">', '</span>' ); ?>
-
 		</header>
 
 		<header class="entry-header">
@@ -44,7 +44,7 @@
 		<?php else : ?>
 		<div class="entry-content">
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'amstraslate' ) ); ?>
-			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'amstraslate' ), 'after' => '</div>' ) ); ?>
+			<?php wp_link_pages( amstheme_previous_next() ); ?>
 		</div><!-- .entry-content -->
 		<?php endif; ?>
 
@@ -79,4 +79,5 @@
 				</div><!-- .author-info -->
 			<?php endif; ?>
 		</footer><!-- .entry-meta -->
+
 	</article><!-- #post -->

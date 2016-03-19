@@ -34,8 +34,7 @@ if ( ! isset( $content_width ) )
  *
  * @uses load_theme_textdomain() For translation/localization support.
  * @uses add_editor_style() To add a Visual Editor stylesheet.
- * @uses add_theme_support() To add support for post thumbnails, automatic feed links,
- * 	custom background, and post formats.
+ * @uses add_theme_support() To add support for post thumbnails, automatic feed links, custom background, and post formats.
  * @uses register_nav_menu() To add support for navigation menus.
  * @uses set_post_thumbnail_size() To set a custom post thumbnail size.
  *
@@ -76,48 +75,29 @@ require( get_template_directory() . '/inc/custom-header.php' );
 
 /**
  * Return the Google font stylesheet URL if available.
+ * maybe user want to change language then too change the function
  *
- * The use of Open Sans by default is localized. For languages that use
- * characters not supported by the font, the font can be disabled.
- *
- * @since Twenty Twelve 1.2
- * @return string Font stylesheet or empty string if disabled.
+ * @since amsdemo 1.0
+ * @return google font url too use open sans.
+ * https://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin,latin-ext
  */
-function twentytwelve_get_font_url() {
+function amstheme_get_font_url() {
 	$font_url = '';
-
-	/* translators: If there are characters in your language that are not supported
-	 * by Open Sans, translate this to 'off'. Do not translate into your own language.
-	 */
-	if ( 'off' !== _x( 'on', 'Open Sans font: on or off', 'twentytwelve' ) ) {
-		$subsets = 'latin,latin-ext';
-
-		/* translators: To add an additional Open Sans character subset specific to your language,
-		 * translate this to 'greek', 'cyrillic' or 'vietnamese'. Do not translate into your own language.
-		 */
-		$subset = _x( 'no-subset', 'Open Sans font: add new subset (greek, cyrillic, vietnamese)', 'twentytwelve' );
-
-		if ( 'cyrillic' == $subset )
-			$subsets .= ',cyrillic,cyrillic-ext';
-		elseif ( 'greek' == $subset )
-			$subsets .= ',greek,greek-ext';
-		elseif ( 'vietnamese' == $subset )
-			$subsets .= ',vietnamese';
+	$subsets = 'latin,latin-ext';
 
 		$query_args = array(
-			'family' => 'Open+Sans:400italic,700italic,400,700',
+			'family' => 'Open+Sans:400,600',
 			'subset' => $subsets,
 		);
 		$font_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
 	}
-
 	return $font_url;
 }
 
 /**
  * Enqueue scripts and styles for front-end.
  *
- * @since Twenty Twelve 1.0
+ * @since amstheme 1.0
  */
 function twentytwelve_scripts_styles() {
 	global $wp_styles;
@@ -130,9 +110,9 @@ function twentytwelve_scripts_styles() {
 		wp_enqueue_script( 'comment-reply' );
 
 	// Adds JavaScript for handling the navigation menu hide-and-show behavior.
-	wp_enqueue_script( 'amstheme-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20140711', true );
+	wp_enqueue_script( 'amstheme-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20160318', true );
 
-	$font_url = twentytwelve_get_font_url();
+	$font_url = amstheme_get_font_url();
 	if ( ! empty( $font_url ) )
 		wp_enqueue_style( 'amstheme-fonts', esc_url_raw( $font_url ), array(), null );
 
@@ -140,37 +120,10 @@ function twentytwelve_scripts_styles() {
 	wp_enqueue_style( 'amstheme-style', get_stylesheet_uri() );
 
 	// Loads the Internet Explorer specific stylesheet.
-	wp_enqueue_style( 'amstheme-ie', get_template_directory_uri() . '/css/ie.css', array( 'twentytwelve-style' ), '20121010' );
+	wp_enqueue_style( 'amstheme-ie', get_template_directory_uri() . '/css/ie.css', array( 'amstheme-style' ), '20160318' );
 	$wp_styles->add_data( 'amstheme-ie', 'conditional', 'lt IE 9' );
 }
 add_action( 'wp_enqueue_scripts', 'twentytwelve_scripts_styles' );
-
-/**
- * Filter TinyMCE CSS path to include Google Fonts.
- *
- * Adds additional stylesheets to the TinyMCE editor if needed.
- *
- * @uses twentytwelve_get_font_url() To get the Google Font stylesheet URL.
- *
- * @since Twenty Twelve 1.2
- *
- * @param string $mce_css CSS path to load in TinyMCE.
- * @return string Filtered CSS path.
- */
-function twentytwelve_mce_css( $mce_css ) {
-	$font_url = twentytwelve_get_font_url();
-
-	if ( empty( $font_url ) )
-		return $mce_css;
-
-	if ( ! empty( $mce_css ) )
-		$mce_css .= ',';
-
-	$mce_css .= esc_url_raw( str_replace( ',', '%2C', $font_url ) );
-
-	return $mce_css;
-}
-add_filter( 'mce_css', 'twentytwelve_mce_css' );
 
 /**
  * Filter the page title.
@@ -196,7 +149,7 @@ function twentytwelve_wp_title( $title, $sep ) {
 	// Add the site description for the home/front page.
 	$site_description = get_bloginfo( 'description', 'display' );
 	if ( $site_description && ( is_home() || is_front_page() ) )
-		$title = "$title $sep $site_description";
+		$title = "$title";
 
 	// Add a page number if necessary.
 	if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() )
@@ -222,6 +175,7 @@ add_filter( 'wp_page_menu_args', 'twentytwelve_page_menu_args' );
 
 /**
  * Register sidebars.
+ * <strong>not change name</strong>
  *
  * Registers our main widget area and the front page widget areas.
  *
@@ -404,10 +358,8 @@ endif;
  * Extend the default WordPress body classes.
  *
  * Extends the default WordPress body class to denote:
- * 1. Using a full-width layout, when no active widgets in the sidebar
- *    or full-width template.
- * 2. Front Page template: thumbnail in use and number of sidebars for
- *    widget areas.
+ * 1. Using a full-width layout, when no active widgets in the sidebar or full-width template.
+ * 2. Front Page template: thumbnail in use and number of sidebars for widget areas.
  * 3. White or empty background color to change the layout and spacing.
  * 4. Custom fonts enabled.
  * 5. Single or multiple authors.
@@ -493,3 +445,23 @@ function twentytwelve_customize_preview_js() {
 	wp_enqueue_script( 'twentytwelve-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20141120', true );
 }
 add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
+
+/**
+ * Create previous and next page
+ *
+ * @since amstheme 1.0
+ */
+ function amstheme_previous_next() {
+	 $previous_next=array(
+		 // 翻譯一定要用__() _e()會換行
+		'before'           => '<div class="nav">' . _( 'Pages:','amstraslate' ),
+		'after'            => '</div>',
+		'link_before'      => '<span class="nav_button">',
+		'link_after'       => '</span>',
+		'next_or_number'   => 'number',
+		'separator'        => ' ',
+		'pagelink'         => '%',
+		'echo'             => 1
+	);
+	 return $previous_next;
+ }
