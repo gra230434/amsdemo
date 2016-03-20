@@ -85,12 +85,12 @@ function amstheme_get_font_url() {
 	$font_url = '';
 	$subsets = 'latin,latin-ext';
 
-		$query_args = array(
-			'family' => 'Open+Sans:400,600',
-			'subset' => $subsets,
-		);
-		$font_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-	}
+	$query_args = array(
+		'family' => 'Open+Sans:400,600',
+		'subset' => $subsets,
+	);
+	$font_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+
 	return $font_url;
 }
 
@@ -117,7 +117,12 @@ function twentytwelve_scripts_styles() {
 		wp_enqueue_style( 'amstheme-fonts', esc_url_raw( $font_url ), array(), null );
 
 	// Loads our main stylesheet.
+	// master
 	wp_enqueue_style( 'amstheme-style', get_stylesheet_uri() );
+	// min-width: 600px
+	wp_enqueue_style( 'amstheme600-style', get_stylesheet_uri() . '/css/up_600px', array(), '20160320', 'screen and (min-width: 600px)' );
+	// min-width: 960px
+	wp_enqueue_style( 'amstheme960-style', get_stylesheet_uri() . '/css/up_960px', array(), '20160320', 'screen and (min-width: 960px)' );
 
 	// Loads the Internet Explorer specific stylesheet.
 	wp_enqueue_style( 'amstheme-ie', get_template_directory_uri() . '/css/ie.css', array( 'amstheme-style' ), '20160318' );
@@ -454,9 +459,9 @@ add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
  function amstheme_previous_next() {
 	 $previous_next=array(
 		 // 翻譯一定要用__() _e()會換行
-		'before'           => '<div class="nav">' . _( 'Pages:','amstraslate' ),
+		'before'           => '<div class="link_pages">' . <p>__( 'Pages:','amstraslate' )</p>,
 		'after'            => '</div>',
-		'link_before'      => '<span class="nav_button">',
+		'link_before'      => '<span class="link_pages_button">',
 		'link_after'       => '</span>',
 		'next_or_number'   => 'number',
 		'separator'        => ' ',
