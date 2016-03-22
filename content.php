@@ -29,13 +29,12 @@
 			<?php edit_post_link( __( 'Edit', 'amstraslate' ), '<span class="edit-link">', '</span>' ); ?>
 		</header>
 
-		<header class="entry-header">
+		<div class="entry-header">
 			<?php // the post don't have password and post image ?>
 			<?php if ( ! post_password_required() && ! is_attachment() ) :
 				the_post_thumbnail();
 			endif; ?>
-
-		</header><!-- .entry-header -->
+		</div><!-- .entry-header -->
 
 		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 		<div class="entry-summary">
@@ -44,7 +43,9 @@
 		<?php else : ?>
 		<div class="entry-content">
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'amstraslate' ) ); ?>
-			<?php wp_link_pages( amstheme_previous_next() ); ?>
+			<?php  if ( is_singular() ):
+				wp_link_pages( amstheme_previous_next() );
+			endif ?>
 		</div><!-- .entry-content -->
 		<?php endif; ?>
 

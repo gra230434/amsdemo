@@ -726,7 +726,7 @@ article.sticky .featured-post {
 .entry-summary p,
 .comment-content p,
 .mu_register p {
-	margin: 0 0 24px;
+	margin: 0 0 20px;
 	line-height: 1.714285714;
 }
 .entry-content a:visited,
