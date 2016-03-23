@@ -1310,7 +1310,27 @@ a.comment-edit-link:hover {
 	display: block;
 	text-align: right;
 }
+/* member widget */
+.members_li {
+	margin-bottom: 30px;
+	margin-top: 10px;
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+.members_li h3{
+	padding-bottom: 7px;
+	font-size: 18px;
+}
+.members_li p{
+	font-size: 16px;
+	line-height: 150%;
+	padding-left: 15px;
+}
 
+.member_social {
+	font-size: 16px;
+	line-height: 150%;
+	padding-left: 15px;
+}
 
 /* =Plugins
 ----------------------------------------------- */

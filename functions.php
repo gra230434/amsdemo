@@ -101,7 +101,6 @@ function amstheme_get_font_url() {
  */
 function twentytwelve_scripts_styles() {
 	global $wp_styles;
-
 	/*
 	 * Adds JavaScript to pages with the comment form to support
 	 * sites with threaded comments (when in use).
@@ -120,9 +119,9 @@ function twentytwelve_scripts_styles() {
 	// master
 	wp_enqueue_style( 'amstheme-style', get_stylesheet_uri() );
 	// min-width: 600px
-	wp_enqueue_style( 'amstheme600-style', get_stylesheet_uri() . '/css/up_600px', array(), '20160320', 'screen and (min-width: 600px)' );
+	wp_enqueue_style( 'amstheme600-style', get_template_directory_uri() . '/css/up_600px.css', array(), '20160320', 'screen and (min-width: 600px)' );
 	// min-width: 960px
-	wp_enqueue_style( 'amstheme960-style', get_stylesheet_uri() . '/css/up_960px', array(), '20160320', 'screen and (min-width: 960px)' );
+	wp_enqueue_style( 'amstheme960-style', get_template_directory_uri() . '/css/up_960px.css', array(), '20160320', 'screen and (min-width: 960px)' );
 
 	// Loads the Internet Explorer specific stylesheet.
 	wp_enqueue_style( 'amstheme-ie', get_template_directory_uri() . '/css/ie.css', array( 'amstheme-style' ), '20160318' );
@@ -223,6 +222,15 @@ function twentytwelve_widgets_init() {
 		'before_widget' => '<li id="footer_video" class="footer_video">',
 		'after_widget' => '</li>',
 		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+	register_sidebar( array(
+		'name' => __( 'Members Widget Area', 'amstraslate' ),
+		'id' => 'sidebar-member',
+		'description' => __( 'For members widget area', 'amstraslate' ),
+		'before_widget' => '<li id="members_li" class="members_li">',
+		'after_widget' => '</li>',
+		'before_title' => '<h3 class="member-title">',
 		'after_title' => '</h3>',
 	) );
 }
@@ -459,7 +467,7 @@ add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
  function amstheme_previous_next() {
 	 $previous_next=array(
 		 // 翻譯一定要用__() _e()會換行
-		'before'           => '<div class="link_pages">' . <p>__( 'Pages:','amstraslate' )</p>,
+		'before'           => '<div class="link_pages">' . '<p>' . __( 'Pages:','amstraslate' ) . '</p>',
 		'after'            => '</div>',
 		'link_before'      => '<span class="link_pages_button">',
 		'link_after'       => '</span>',
