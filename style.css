@@ -322,6 +322,12 @@ img.wp-post-image {
 	border-radius: 3px;
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
+.entry-content video,
+.footer_video video,
+.widget video {
+	border-radius: 3px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
 .wp-caption {
 	max-width: 100%; /* Keep wide captions from overflowing their container. */
 	padding: 4px;
@@ -1318,10 +1324,10 @@ a.comment-edit-link:hover {
 }
 .members_li h3{
 	padding-bottom: 7px;
-	font-size: 18px;
+	font-size: 16px;
 }
 .members_li p{
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 150%;
 	padding-left: 15px;
 }
