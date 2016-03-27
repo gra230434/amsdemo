@@ -1,13 +1,17 @@
-/* Minimum width of 960 pixels. */
-@media screen and (min-width: 960px) {
+/* Minimum width of 1020 pixels. */
+@media screen and (min-width: 1025px) {
 	body {
 		background-color: #e6e6e6;
+		background-image: url("../image/AMS.jpeg");
+		background-attachment: fixed;
+		background-size: 100% auto;
+		opacity: 0.96;
 	}
 	body .site {
 		padding: 0 40px;
 		margin-top: 48px;
-		margin-bottom: 48px;
 		box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+		border-radius: 5px 5px 0px 0px;
 	}
 	body.custom-background-empty {
 		background-color: #fff;
@@ -18,5 +22,9 @@
 		margin-top: 0;
 		margin-bottom: 0;
 		box-shadow: none;
+	}
+	.site-footer {
+		margin-bottom: 48px;
+		border-radius: 0px 0px 5px 5px;
 	}
 }

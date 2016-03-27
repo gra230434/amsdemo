@@ -10,12 +10,12 @@
 	}
 	.site {
 		margin: 0 auto;
-		max-width: 960px;
+		max-width: 1020px;
 		overflow: hidden;
 	}
 	.site-content {
 		float: left;
-		width: 65.104166667%;
+		width: 70%;
 	}
 	body.template-front-page .site-content,
 	body.attachment .site-content,
@@ -24,7 +24,7 @@
 	}
 	.widget-area {
 		float: right;
-		width: 26.041666667%;
+		width: 25%;
 	}
 	.site-header h1,
 	.site-header h2 {

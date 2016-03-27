@@ -121,7 +121,7 @@ function twentytwelve_scripts_styles() {
 	// min-width: 600px
 	wp_enqueue_style( 'amstheme600-style', get_template_directory_uri() . '/css/up_600px.css', array(), '20160320', 'screen and (min-width: 600px)' );
 	// min-width: 960px
-	wp_enqueue_style( 'amstheme960-style', get_template_directory_uri() . '/css/up_960px.css', array(), '20160320', 'screen and (min-width: 960px)' );
+	wp_enqueue_style( 'amstheme960-style', get_template_directory_uri() . '/css/up_1020px.css', array(), '20160320', 'screen and (min-width: 1020px)' );
 
 	// Loads the Internet Explorer specific stylesheet.
 	wp_enqueue_style( 'amstheme-ie', get_template_directory_uri() . '/css/ie.css', array( 'amstheme-style' ), '20160318' );
@@ -478,3 +478,45 @@ add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
 	);
 	 return $previous_next;
  }
+
+ /**
+ * Add Categories and Tags to Page
+ *
+ * @since amstheme 1.0
+*/
+ function add_taxonomies_to_pages() {
+	 	register_taxonomy_for_object_type( 'post_tag', 'page' );
+    register_taxonomy_for_object_type( 'category', 'page' );
+  }
+
+ add_action( 'init', 'add_taxonomies_to_pages' );
+
+ if ( ! is_admin() ) {
+ add_action( 'pre_get_posts', 'category_and_tag_archives' );
+ }
+
+ function category_and_tag_archives( $wp_query ) {
+	 	$my_post_array = array('post','page');
+
+		if ( $wp_query->get( 'category_name' ) || $wp_query->get( 'cat' ) )
+      $wp_query->set( 'post_type', $my_post_array );
+
+    if ( $wp_query->get( 'tag' ) )
+      $wp_query->set( 'post_type', $my_post_array );
+ }
+ /**
+ * change amstheme search form
+ *
+ * @since amstheme 1.0
+*/
+ function amstheme_search_form( $form ){
+        $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
+    <span id="searchspan">
+    <input type="text" value="' . get_search_query() . '" name="s" id="searchinput" placeholder="' . __('search', 'amstraslate' ) .'" />
+    <input type="submit" id="searchsubmit" value="'. esc_attr__( 'Search' ) .'" />
+    </span>
+    </form>';
+
+    return $form;
+ }
+add_filter( 'get_search_form', 'amstheme_search_form' );
