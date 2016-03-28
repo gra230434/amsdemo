@@ -18,35 +18,34 @@
 
 		<header class="entry-header">
 			<?php if ( is_single() ) : ?>
-			<h1 class="entry-title"><?php the_title(); ?></h1>
+			  <h1 class="entry-title"><?php the_title(); ?></h1>
 			<?php else : ?>
-			<h1 class="entry-title">
-				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
-			</h1>
+		  	<h1 class="entry-title">
+			  	<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+		  	</h1>
 			<?php endif; // is_single() ?>
-
 			<?php // is editor show edit button ?>
 			<?php edit_post_link( __( 'Edit', 'amstraslate' ), '<span class="edit-link">', '</span>' ); ?>
 		</header>
 
-		<div class="entry-header">
-			<?php // the post don't have password and post image ?>
-			<?php if ( ! post_password_required() && ! is_attachment() ) :
-				the_post_thumbnail();
-			endif; ?>
-		</div><!-- .entry-header -->
-
-		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
-		<div class="entry-summary">
-			<?php the_excerpt(); ?>
-		</div><!-- .entry-summary -->
-		<?php else : ?>
-		<div class="entry-content">
-			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'amstraslate' ) ); ?>
-			<?php  if ( is_singular() ):
-				wp_link_pages( amstheme_previous_next() );
-			endif ?>
-		</div><!-- .entry-content -->
+    <?php if (post_password_required()): ?>
+			<span class"need-password"><?php __('the post need password', 'amstraslate') ?></span>
+		<?php else :?>
+			<?php if ( has_post_thumbnail() ): ?>
+	      <div class="entry-header">
+				<?php the_post_thumbnail(); // the post don't have password and post image ?>
+			  </div><!-- .entry-header -->
+			<?php endif; ?>
+      <?php if ( is_search() ) : // Only display Excerpts for Search ?>
+		    <div class="entry-summary">
+			    <?php the_excerpt(); ?>
+		    </div><!-- .entry-summary -->
+		  <?php else : ?>
+		    <div class="entry-content">
+			  <?php the_content( __( 'read more ...', 'amstraslate' ) );
+				      wp_link_pages( amstheme_previous_next() ); ?>
+		    </div><!-- .entry-content -->
+		    <?php endif; ?>
 		<?php endif; ?>
 
 		<footer class="entry-meta">

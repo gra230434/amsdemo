@@ -10,7 +10,7 @@
 	}
 	.site {
 		margin: 0 auto;
-		max-width: 1020px;
+		width: 100%;
 		overflow: hidden;
 	}
 	.site-content {
@@ -31,20 +31,17 @@
 		text-align: left;
 	}
 	.site-header h1 {
-		font-size: 36px;
-		line-height: 1.5;
-		margin-top: 45px;
-		margin-bottom: 5px;
+		font-size: 42px;
+		margin-top: 20px;
+		margin-bottom: 10px;
+		margin-right: 20px;
 	}
 	.site-header h2 {
 		font-size: 18px;
-		margin-top: 5px;
 	}
 
 	.main-navigation ul.nav-menu,
 	.main-navigation div.nav-menu > ul {
-		border-bottom: 1px solid #ededed;
-		border-top: 1px solid #ededed;
 		display: inline-block !important;
 		text-align: left;
 		width: 100%;
@@ -167,5 +164,8 @@
 	}
 	.commentlist .children {
 		margin-left: 48px;
+	}
+	.header_image_long {
+		padding: 0px;
 	}
 }

@@ -2,15 +2,8 @@
 @media screen and (min-width: 1025px) {
 	body {
 		background-color: #e6e6e6;
-		background-image: url("../image/AMS.jpeg");
-		background-attachment: fixed;
-		background-size: 100% auto;
-		opacity: 0.96;
 	}
 	body .site {
-		padding: 0 40px;
-		margin-top: 48px;
-		box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
 		border-radius: 5px 5px 0px 0px;
 	}
 	body.custom-background-empty {
@@ -23,8 +16,21 @@
 		margin-bottom: 0;
 		box-shadow: none;
 	}
-	.site-footer {
-		margin-bottom: 48px;
-		border-radius: 0px 0px 5px 5px;
+	.site-header {
+		width: 1020px;
+		margin: 0px auto;
+	}
+	.header_image_long {
+		padding: 0px 100px;
+		margin: 0px auto 20px;
+	}
+	.wrapper {
+		width: 1020px;
+	  margin: 0px auto;
+	}
+
+	.site-footer-inner {
+		width: 1020px;
+		margin: 0px auto;
 	}
 }

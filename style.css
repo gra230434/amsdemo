@@ -122,7 +122,9 @@ img {
 	border: 0;
 	-ms-interpolation-mode: bicubic;
 }
-
+hgroup {
+	float: left;
+}
 /* Clearing floats */
 .clear:after,
 .wrapper:after,
@@ -138,11 +140,19 @@ img {
 	display: table;
 	content: "";
 }
-
+.wrapper {
+	padding: 0px 40px;
+}
 
 /* =Repeatable patterns
 -------------------------------------------------------------- */
-
+/* header title */
+.site-title {
+	display: inline-block;
+}
+.site-description {
+	display: inline-block;
+}
 /* Small headers */
 .archive-title,
 .page-title,
@@ -378,6 +388,11 @@ img.wp-smiley,
 	padding: 3%;
 }
 
+/*header image*/
+.header_image_long img {
+	width: 100%;
+}
+
 /* Navigation */
 .site-content nav {
 	clear: both;
@@ -489,8 +504,7 @@ a:hover {
 
 /* Page structure */
 .site {
-	padding: 0 24px;
-	background-color: #fff;
+	background-color: #e6e6e6;
 }
 .site-content {
 	margin: 24px 0 0;
@@ -501,7 +515,7 @@ a:hover {
 
 /* Header */
 .site-header {
-	padding: 24px 0;
+	padding: 0px 40px;
 }
 .site-header h1,
 .site-header h2 {
@@ -536,6 +550,7 @@ a:hover {
 .main-navigation {
 	margin-top: 24px;
 	text-align: center;
+	float: right;
 }
 .main-navigation li {
 	margin-top: 24px;
@@ -606,20 +621,20 @@ section[role="banner"] {
 
 /* Footer */
 .site-footer {
-	background-color: white;
-	max-width: 1020px;
-	padding: 20px 40px;
+	max-width: 100%;
+	padding: 50px 0px 100px;
 }
-
+.site-footer-inner {
+	margin: 0px auto;
+}
 .footer_widgets_area {
 	width: 100%;
-	height: 210px;
 }
 
 .footer_video {
 	float: left;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: 1%;
+	padding-right: 1%;
 	margin-bottom: 20px;
 	width: 23%;
 }
@@ -635,7 +650,6 @@ footer[role="contentinfo"] {
 	clear: both;
 	font-size: 12px;
 	line-height: 2;
-	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -647,6 +661,8 @@ footer[role="contentinfo"] a:hover {
 }
 .site-info {
 	color: #e6e6e6;
+	display: table;
+	width: 100%;
 }
 
 /* =Main content and comment content
@@ -909,21 +925,19 @@ img.aligncenter,
 }
 /* lonk of pages*/
 .link_pages {
-	float: right;
+	float: left;
 	height: auto;
-	font-size: 16px;
-	font-weight: bold;
-	line-height: 40px;
+	margin: 10px 0px;
+	font-style: normal;
+  font-size: 14px;
 }
 .link_pages p {
-	line-height: 40px;
 	float: left;
 	margin: 0px 5px 0px 0px;
 }
 .link_pages span {
 	color: #404040;
-	padding: 10px;
-	margin-left: 5px;
+	padding: 7px 10px;
 	background-color: rgb(0, 153, 255);
 }
 .link_pages a {
@@ -1374,6 +1388,17 @@ a.comment-edit-link:hover {
 	font-size: 16px;
 	line-height: 150%;
 	padding-left: 15px;
+}
+
+.background-image {
+	background-color: white;
+	padding-top: 150px;
+	margin-top: -150px;
+	border-top: 5px solid rgb(230, 92, 0);
+}
+
+.background {
+	background-color: white;
 }
 
 /* =Plugins

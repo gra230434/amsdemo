@@ -49,5 +49,12 @@
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>" class="header-image" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" /></a>
 		<?php endif; ?>
 	</header><!-- #masthead -->
-
+	<?php if ( is_home()||is_category()||is_page() ) : ?>
+		<div class="header_image_long">
+			<img src="<?php echo get_template_directory_uri(); ?>/image/homepage_1.png">
+		</div>
+		<div id="background-image-white" class="background-image">
+		</div><!-- #background-image-white .background-image -->
+	<?php endif; ?>
+	<div id="background-white" class="background">
 	<div id="main" class="wrapper">
