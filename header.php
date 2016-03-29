@@ -32,29 +32,32 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
-	<header id="masthead" class="site-header" role="banner">
-		<hgroup>
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</hgroup>
+<div id="header-fixed" class="header-fixed">
+	<div id="masthead" class="site-header" role="banner">
+		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle"><?php _e( 'Menu', 'amstraslate' ); ?></button>
 			<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'amstraslate' ); ?>"><?php _e( 'Skip to content', 'amstraslate' ); ?></a>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
+	</div><!-- #masthead .site-header -->
+</div><!-- #header-fixed .header-fixed -->
 
+<div id="page" class="hfeed site">
 		<?php if ( get_header_image() ) : ?>
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>" class="header-image" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" /></a>
 		<?php endif; ?>
-	</header><!-- #masthead -->
+
 	<?php if ( is_home()||is_category()||is_page() ) : ?>
 		<div class="header_image_long">
-			<img src="<?php echo get_template_directory_uri(); ?>/image/homepage_1.png">
-		</div>
-		<div id="background-image-white" class="background-image">
-		</div><!-- #background-image-white .background-image -->
+			<div class="header_image_box">
+				<div class="header_image_background"></div>
+			<?php dynamic_sidebar( 'sidebar-2' ); ?>
+		  </div><!-- .header_image_box -->
+		</div><!-- .header_image_long -->
 	<?php endif; ?>
+
 	<div id="background-white" class="background">
 	<div id="main" class="wrapper">
