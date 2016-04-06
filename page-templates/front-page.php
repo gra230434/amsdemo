@@ -14,22 +14,14 @@
 
 get_header(); ?>
 
-	<div id="primary" class="site-content">
-		<div id="content" role="main">
+	<div id="homepage" class="homepage">
 
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php if ( has_post_thumbnail() ) : ?>
-					<div class="entry-page-image">
-						<?php the_post_thumbnail(); ?>
-					</div><!-- .entry-page-image -->
-				<?php endif; ?>
+		<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'content', 'page' ); ?>
+			<?php get_template_part( 'content', 'home' ); ?>
 
-			<?php endwhile; // end of the loop. ?>
+		<?php endwhile; // end of the loop. ?>
 
-		</div><!-- #content -->
-	</div><!-- #primary -->
+	</div><!-- #homepage -->
 
-<?php get_sidebar( 'front' ); ?>
 <?php get_footer(); ?>

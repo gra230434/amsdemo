@@ -504,19 +504,15 @@ add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
     if ( $wp_query->get( 'tag' ) )
       $wp_query->set( 'post_type', $my_post_array );
  }
- /**
- * change amstheme search form
- *
- * @since amstheme 1.0
-*/
+
  function amstheme_search_form( $form ){
-        $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
-    <span id="searchspan">
+	$form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
+    <span>
     <input type="text" value="' . get_search_query() . '" name="s" id="searchinput" placeholder="' . __('search', 'amstraslate' ) .'" />
     <input type="submit" id="searchsubmit" value="'. esc_attr__( 'Search' ) .'" />
     </span>
     </form>';
-
+ 
     return $form;
  }
 add_filter( 'get_search_form', 'amstheme_search_form' );

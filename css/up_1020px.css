@@ -17,19 +17,21 @@
 		box-shadow: none;
 	}
 	.site-header {
-		width: 1020px;
+		width: 90%;
 		margin: 0px auto;
 	}
 	.header_image_long {
-		height: 640px;
+		height: 530px;
 	}
 	.wrapper {
 		width: 1020px;
 	  margin: 0px auto;
 	}
-
 	.site-footer-inner {
 		width: 1020px;
 		margin: 0px auto;
 	}
+	.footer_video {
+        width: 30%;
+}
 }

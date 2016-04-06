@@ -205,14 +205,6 @@ msgstr ""
 msgid "Post navigation"
 msgstr ""
 
-#: functions.php:264
-msgid "Footer Widget Area"
-msgstr ""
-
-#: functions.php:264
-msgid "For footer video area"
-msgstr ""
-
 #: functions.php:284
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr ""

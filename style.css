@@ -148,34 +148,37 @@ hgroup {
 -------------------------------------------------------------- */
 /* header title */
 .header-fixed{
-	height: 60px;
-  width: 100%;
-  position: fixed;
-  background-color: #e6e6e6;
+	height: 48px;
+  	width: 100%;
+  	position: fixed;
+  	background-color: #e6e6e6;
 	z-index: 500;
 }
 .header_image_box {
 	position: relative;
 	top: 40px;
 	left: 60%;
-	width: 400px;
-	height: 500px;
+	width: 370px;
+	height: 75%;
 }
 .header_image_box .widget {
-	top: 40px;
+	top: 0px;
 	position: absolute;
 	color: black;
 	font-size: 18px;
-	left: 20px;
+	margin: 5% 20px 5%;
+	height: 90%;
+	overflow: auto;
 }
 .header_image_box .widget h3{
 	font-size: 24px;
+	line-height: 1.6;
 	color: rgb(0, 191, 254);
 }
 .header_image_box .widget .textwidget{
-	padding-right: 20px;
 	color: #EAEAEA;
-	line-height: 25px;
+	font-size: 16px;
+	line-height: 1.4;
 }
 .header_image_background {
 	background-color: rgb(38, 38, 38);
@@ -192,6 +195,58 @@ hgroup {
 }
 .site-description {
 	display: inline-block;
+}
+/* home page */
+#homepage{
+	margin: 30px 20px;
+}
+#homepage_ark {
+	font-family: "Microsoft JhengHei", "Open Sans", Helvetica, Arial, sans-serif;
+	font-size: 16px;	
+}
+#homepage_ark .home-title{
+	font-size: 24px;
+	padding: 10px 0px;
+}
+.home-content {
+	margin: 15px 0px;
+	line-height: 1.5;
+}
+.link_to_box {
+	margin: 20px;
+}
+.link_to_box a {
+        color: red;
+	position: relative;
+}
+.link_to_box a:hover {
+        color: blue;
+	left: -30px;
+}
+.link_to {
+	padding: 15px 10px;
+	height: 130px;
+}
+.link_to_circle {
+	float: left;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: white;
+	border: 10px black solid;
+}
+.link_to_img {
+	margin: 10px;
+	border-radius: 0px;
+	box-shadow: 0 0 0 white;
+}
+.link_to_txt {
+	float: left;
+	width: 700px;
+	margin-left: 20px;
+}
+.link_to_txt h3 {
+	font-size: 20px;
 }
 /* Small headers */
 .archive-title,
@@ -338,7 +393,7 @@ img.size-full,
 img.size-large,
 img.header-image,
 img.wp-post-image {
-	max-width: 80%;
+	max-width: 100%;
 	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
 }
 
@@ -500,12 +555,12 @@ html {
 }
 body {
 	font-size: 14px;
-	font-family:"Open Sans", Helvetica, Arial, sans-serif;
+	font-family: "Microsoft JhengHei", "Open Sans", Helvetica, Arial, sans-serif;
 	text-rendering: optimizeLegibility;
 	color: #444;
 }
 body.custom-font-enabled {
-	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-family: "Microsoft JhengHei", "Open Sans", Helvetica, Arial, sans-serif;
 }
 a {
 	outline: none;
@@ -547,7 +602,7 @@ a:hover {
 /* Page structure */
 .site {
 	background-color: #e6e6e6;
-	padding-top: 60px;
+	padding-top: 48px;
 }
 .site-content {
 	margin: 24px 0 0;
@@ -563,7 +618,7 @@ a:hover {
 .site-header h1,
 .site-header h2,
 .main-navigation li a {
-	line-height: 60px;
+	line-height: 40px;
 }
 .site-header h1 a,
 .site-header h2 a {
@@ -581,7 +636,9 @@ a:hover {
 }
 .site-header h2 {
 	font-weight: normal;
-	font-size: 13px;
+	font-size: 14px;
+	line-height: 20px;
+	margin-top: 20px;
 	color: #757575;
 }
 .header-image {
@@ -677,7 +734,7 @@ section[role="banner"] {
 	padding-left: 1%;
 	padding-right: 1%;
 	margin-bottom: 20px;
-	width: 23%;
+	width: 70%;
 }
 .footer_video .widget-title {
 	color: white;
@@ -1388,12 +1445,14 @@ a.comment-edit-link:hover {
 }
 #searchform{
 	height: 34px;
+	float: right;
 }
 #searchinput {
 	border-right-width: 0px;
 	padding-right: 0px;
 	font-size: 12px;
 	height: 19.5px;
+	width: 180px;
 }
 #searchsubmit{
 	border-width: 1px 0px 0px 1px;
@@ -1413,7 +1472,7 @@ a.comment-edit-link:hover {
 .members_li {
 	margin-bottom: 30px;
 	margin-top: 10px;
-	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-family: "Microsoft JhengHei", "Open Sans", Helvetica, Arial, sans-serif;
 }
 .members_li h3{
 	padding-bottom: 7px;

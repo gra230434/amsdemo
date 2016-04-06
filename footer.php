@@ -15,6 +15,9 @@
 
 <footer id="colophon" class="site-footer" role="contentinfo">
 	<div class="site-footer-inner">
+		<div style="width:100%;height:35px;">
+		<?php get_search_form(); ?>
+		</div>
 		<?php get_sidebar( 'footer' ); ?>
 
 		<div class="site-info">
