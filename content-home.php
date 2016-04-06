@@ -18,6 +18,6 @@
 			      echo $home_content; ?>
 		</div><!-- .home-content -->
 		<footer class="home-meta">
-			<?php edit_post_link( __( 'Edit', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php edit_post_link( __( 'Edit', 'amstraslate' ), '<span class="edit-link">', '</span>' ); ?>
 		</footer><!-- .home-meta -->
 	</article><!-- #homepage_ark -->
