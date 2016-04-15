@@ -140,19 +140,17 @@ hgroup {
 	display: table;
 	content: "";
 }
-.wrapper {
-	padding: 0px 40px;
-}
 
 /* =Repeatable patterns
 -------------------------------------------------------------- */
 /* header title */
 .header-fixed{
-	height: 48px;
-  	width: 100%;
-  	position: fixed;
-  	background-color: #e6e6e6;
+	height: 46px;
+  width: 100%;
+  position: fixed;
+  background-color: #e6e6e6;
 	z-index: 500;
+	box-shadow: 0px 2px 2px #82BAF7;
 }
 .header_image_box {
 	position: relative;
@@ -198,7 +196,7 @@ hgroup {
 }
 /* home page */
 #homepage{
-	margin: 30px 20px;
+	margin: 30px 0px;
 }
 #homepage_ark {
 	font-family: "Microsoft JhengHei", "Open Sans", Helvetica, Arial, sans-serif;
@@ -209,33 +207,36 @@ hgroup {
 	padding: 10px 0px;
 }
 .home-content {
-	margin: 15px 0px;
+	margin: 50px 0px;
 	line-height: 1.5;
 }
 .link_to_box {
-	margin: 20px;
-}
-.link_to_box a {
-  color: blue;
-}
-.link_to_box a .link_to {
+	margin: 30px 0px;
 	position: relative;
+	height: 600px;
+	background-color:#e6e6e6;
+	border-radius: 5px;
+}
+.link_to_box h2 {
+	font-size: 18px;
+}
+.link_to_box p {
+	margin-top: 10px;
+}
+.whatis_left{
+	width: 300px;
+	padding: 30px;
+	position: absolute;
+	top: 0px;
 	left: 0px;
-	transform: scale(1);
-	transition: all 1.2s;
 }
-.link_to_box a:hover .link_to {
-	left: -30px;
-	top: -10px;
+.whatis_left_img {
+	width: 120px;
+	height: 120px;
+	margin: auto;
 }
-#link_to {
-	padding: 15px 10px;
-	height: 130px;
-}
-#link_to:hover {
-	padding: 15px 10px;
-	height: 130px;
-	box-shadow: 4px 4px 3px rgba(20%,20%,40%,0.5);
+.whatis_left_info {
+	margin-top: 20px
 }
 .link_to_circle {
 	float: left;
@@ -250,14 +251,71 @@ hgroup {
 	border-radius: 0px;
 	box-shadow: 0 0 0 white;
 }
-.link_to_txt {
-	float: left;
-	width: 700px;
-	margin-left: 20px;
+.whatis_right {
+	display: none;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	color: #bcbcbc;
 }
-.link_to_txt h3 {
+.whatis_right_link {
+	position: relative;
+	height: 110px;
+	padding: 20px;
+	background-color: #383838;
+}
+.whatis_right_link:hover {
+	background-color: #585858;
+}
+/* whatis div */
+.whatis_div {
+	width: 300px;
+	margin: 80px auto;
+}
+.whatis_center_div{
+	width: 300px;
+	height: 120px;
+	margin: 20px auto;
+}
+.whatis_img {
+	width: 120px;
+	height: 120px;
+	margin: 0px;
+	float: left;
+}
+.link_to_circle {
+	float: left;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	background-color: white;
+	border: 10px black solid;
+	margin: 0px auto;
+} 
+.whatis_center_info {
+	width: 180px;
+	height: 120px;
+	float: left;
+	font-size: 18px;
+}
+/* home news */
+.news {
+	width: 100%;
+}
+.news h1 {
 	font-size: 20px;
 }
+.news p {
+	font-size: 16px;
+}
+.home-new-one {
+	width: 30%;
+	height: 200px;
+	float: left;
+	background-color: gray;
+	margin: 10px 10px;
+}
+
 /* Small headers */
 .archive-title,
 .page-title,
@@ -495,9 +553,10 @@ img.wp-smiley,
 
 /*header image*/
 .header_image_long {
-	background-image: url( "../amsdemo/image/homepage_1.png" );
+	background-image: url( "../amsdemo/image/homepage_1.jpg" );
 	background-repeat: no-repeat;
-	background-position: right bottom;
+	background-position: center;
+	background-size: cover;
 }
 
 /* Navigation */
@@ -839,32 +898,32 @@ article.sticky .featured-post {
 .entry-content h6,
 .comment-content h6 {
 	margin: 24px 0;
-	line-height: 1.714285714;
+	line-height: 1.7;
 }
 .entry-content h1,
 .comment-content h1 {
-	font-size: 20px;
+	font-size: 22px;
 	line-height: 1.5;
 }
 .entry-content h2,
 .comment-content h2,
 .mu_register h2 {
-	font-size: 18px;
+	font-size: 20px;
 	line-height: 1.6;
 }
 .entry-content h3,
 .comment-content h3 {
-	font-size: 16px;
+	font-size: 18px;
 	line-height: 1.846153846;
 }
 .entry-content h4,
 .comment-content h4 {
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 1.846153846;
 }
 .entry-content h5,
 .comment-content h5 {
-	font-size: 13px;
+	font-size: 14px;
 	line-height: 1.846153846;
 }
 .entry-content h6,
@@ -876,6 +935,7 @@ article.sticky .featured-post {
 .entry-summary p,
 .comment-content p,
 .mu_register p {
+	font-size: 16px;
 	margin: 0 0 5px;
 	line-height: 1.5;
 }
@@ -917,6 +977,7 @@ article.sticky .featured-post {
 .entry-content li,
 .comment-content li,
 .mu_register li {
+	font-size: 16px;
 	margin: 0 0 0 36px;
 }
 .entry-content blockquote,

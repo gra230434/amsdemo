@@ -123,6 +123,10 @@ function twentytwelve_scripts_styles() {
 	// min-width: 960px
 	wp_enqueue_style( 'amstheme960-style', get_template_directory_uri() . '/css/up_1020px.css', array(), '20160320', 'screen and (min-width: 1020px)' );
 
+	//
+	wp_enqueue_style( 'BootstrapCDN', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css');
+	wp_enqueue_script( 'BootstrapCDNjs', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', array(), Null, False);
+
 	// Loads the Internet Explorer specific stylesheet.
 	wp_enqueue_style( 'amstheme-ie', get_template_directory_uri() . '/css/ie.css', array( 'amstheme-style' ), '20160318' );
 	$wp_styles->add_data( 'amstheme-ie', 'conditional', 'lt IE 9' );

@@ -160,7 +160,7 @@
 		margin-left: 48px;
 	}
 	.header_image_long {
-		height: 400px;
+		height: calc(100vh - 48px);
 	}
 	.background-image {
 		background-color: white;
@@ -171,5 +171,23 @@
 	}
 	.background {
 		background-color: white;
+	}
+	/* home page */
+	.link_to_box {
+		max-width: 980px;
+	}
+	.whatis_right {
+		display: inline;
+		width: calc(100% - 360px);
+	}
+	.whatis_right p{
+		width: 100%;
+		display: block;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		height: 72px;
 	}
 }

@@ -50,7 +50,7 @@
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>" class="header-image" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" /></a>
 		<?php endif; ?>
 <?php //is_home()||is_category()||is_page() ?>
-	<?php if ( is_home()||is_category()||is_page() ) : ?>
+	<?php if ( is_home()||is_front_page() ) : ?>
 		<div class="header_image_long">
 			<div class="header_image_box">
 				<div class="header_image_background"></div>

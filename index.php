@@ -8,7 +8,50 @@
  */
 
 get_header(); ?>
+        <?php if( have_posts('page_id=59') ):?>
 
+	<?php $home_title = get_post(59)->post_title;
+              $home_content = get_post(59)->post_content; ?>
+	<article id="homepage_ark" <?php post_class(); ?>>
+
+	<header class="home-header">
+		<h1 class="home-title"><?php echo $home_title ?></h1>
+                <div id="borfer-bottom-linear" style="height: 3px;background: linear-gradient(90deg, #0080ff, white);"></div>
+        </header>
+
+        <div class="home-content">
+                <?php echo $home_content; ?>
+        </div><!-- .home-content -->
+
+        <footer class="home-meta">
+                <?php edit_post_link( __( 'Edit', 'amstraslate' ), '<span class="edit-link">', '</span>' ); ?>
+        </footer><!-- .home-meta -->
+
+        </article><!-- #homepage_ark -->
+	<?php endif;?>
+</div><!-- wrapper -->
+<div id="full-screen-news" class="full-screen-news" style="width:100%;background-color:#e6e6e6;">
+	<?php $args = array('cat' => 9,);
+              $query = new WP_Query( $args ); ?>	
+	<?php if ( $query->have_posts() ): ?>
+		<div id="news" class="news">
+		<h1><?php _e('NEWS','amstraslate') ?></h1>
+			<div id="home-news" class="home-news">
+
+			<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+			<div id="home-new-one" class="home-new-one">
+				<article>
+				<h1><?php the_title(); ?></h1>
+				<?php the_content( __( 'read more ...', 'amstraslate' ) ); ?>
+				</article>
+			</div><!-- home-new-one -->
+			<?php endwhile; ?>
+
+			</div><!-- home-news -->
+		</div><!-- news -->
+	<?php endif ?>
+</div><!-- full-screen -->
+<div id="main" class="wrapper">
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
 		<?php if ( have_posts() ) : ?>
@@ -55,5 +98,7 @@ get_header(); ?>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+<?php if( ! is_home() ): ?>
+	<?php get_sidebar(); ?>
+<?php endif ?>
 <?php get_footer(); ?>

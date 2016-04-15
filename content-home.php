@@ -11,6 +11,7 @@
 	<article id="homepage_ark" <?php post_class(); ?>>
 		<header class="home-header">
 			<h1 class="home-title"><?php the_title(); ?></h1>
+			<div id="borfer-bottom-linear" style="height: 3px;background: linear-gradient(90deg, #0080ff, white);"></div>
 		</header>
 
 		<div class="home-content">
