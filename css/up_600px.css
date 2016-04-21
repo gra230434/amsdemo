@@ -26,12 +26,8 @@
 		float: right;
 		width: 25%;
 	}
-	.site-header h1,
-	.site-header h2 {
-		text-align: left;
-	}
 	.site-header h1 {
-		font-size: 42px;
+		font-size: 38px;
 		margin-right: 20px;
 	}
 
@@ -64,6 +60,7 @@
 	.main-navigation li {
 		margin: 0 35px 0 5px;
 		position: relative;
+		line-height: 40px;
 	}
 	.main-navigation li ul {
 		margin: 0;
@@ -159,8 +156,9 @@
 	.commentlist .children {
 		margin-left: 48px;
 	}
-	.header_image_long {
-		height: calc(100vh - 48px);
+	/*header image*/
+	.header_image {
+		height: calc(100vh - 40px);
 	}
 	.background-image {
 		background-color: white;
@@ -169,25 +167,17 @@
 		display: block;
 		border-top: 5px solid rgb(230, 92, 0);
 	}
-	.background {
-		background-color: white;
-	}
 	/* home page */
 	.link_to_box {
 		max-width: 980px;
 	}
-	.whatis_right {
-		display: inline;
-		width: calc(100% - 360px);
+	.whatis_div {
+		width: calc(100% - 20px);
 	}
-	.whatis_right p{
-		width: 100%;
-		display: block;
-		display: -webkit-box;
-		-webkit-line-clamp: 3;
-		-webkit-box-orient: vertical;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		height: 72px;
+	.whatis_center_div {
+		width: 500px;
+	}
+	.whatis_center_info {
+		width: 350px;
 	}
 }

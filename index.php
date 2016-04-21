@@ -8,95 +8,141 @@
  */
 
 get_header(); ?>
-        <?php if( have_posts('page_id=59') ):?>
 
-	<?php $home_title = get_post(59)->post_title;
-              $home_content = get_post(59)->post_content; ?>
-	<article id="homepage_ark" <?php post_class(); ?>>
-
-	<header class="home-header">
-		<h1 class="home-title"><?php echo $home_title ?></h1>
-                <div id="borfer-bottom-linear" style="height: 3px;background: linear-gradient(90deg, #0080ff, white);"></div>
-        </header>
-
-        <div class="home-content">
-                <?php echo $home_content; ?>
-        </div><!-- .home-content -->
-
-        <footer class="home-meta">
-                <?php edit_post_link( __( 'Edit', 'amstraslate' ), '<span class="edit-link">', '</span>' ); ?>
-        </footer><!-- .home-meta -->
-
-        </article><!-- #homepage_ark -->
-	<?php endif;?>
 </div><!-- wrapper -->
-<div id="full-screen-news" class="full-screen-news" style="width:100%;background-color:#e6e6e6;">
-	<?php $args = array('cat' => 9,);
-              $query = new WP_Query( $args ); ?>	
-	<?php if ( $query->have_posts() ): ?>
-		<div id="news" class="news">
-		<h1><?php _e('NEWS','amstraslate') ?></h1>
-			<div id="home-news" class="home-news">
 
-			<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-			<div id="home-new-one" class="home-new-one">
-				<article>
-				<h1><?php the_title(); ?></h1>
-				<?php the_content( __( 'read more ...', 'amstraslate' ) ); ?>
-				</article>
-			</div><!-- home-new-one -->
-			<?php endwhile; ?>
+<div id="HomePage-1" class="FullScreen" style="background-color: white; height: 650px;">
+	<div class="IN_FullScreen" style="position: relative;top: 50%;transform: translateY(-50%);">
+
+	<?php 	$amg = array(	'pagename'	=> 'home-page-1',);
+		$query_1 = new WP_Query( $amg );
+		if( $query_1->have_posts() ): ?>
+
+		<?php while  ( $query_1->have_posts() ) : $query_1->the_post(); ?>
+		<article id="homepage_ark" >
+
+        	<header class="home-header">
+                <h1 class="home-title" style="text-align: center;"><?php the_title(); ?></h1>
+                <div id="borfer-bottom-linear" style="height:3px;background:linear-gradient(90deg, white, #0080ff, white);margin-top: 12px;margin-bottom: 40px;"></div>
+        	</header>
+
+        	<div class="home-content">
+                	<?php echo get_the_content(); ?>
+        	</div><!-- .home-content -->
+
+        	<footer class="home-meta">
+                	<?php edit_post_link( __( 'Edit', 'amstraslate' ), '<span class="edit-link">', '</span>' ); ?>
+        	</footer><!-- .home-meta -->
+
+        	</article><!-- #homepage_ark -->
+		<?php endwhile; ?>
+	
+	<?php endif ?>
+
+	</div><!-- IN_FullScreen -->
+</div><!-- HomePage-1 FullScreen -->
+
+<div id="HomePage-2" class="FullScreen" style="background-color: #262626; height: 700px;color: white;">
+        <div class="IN_FullScreen" style="position: relative;top: 50%;transform: translateY(-50%);">
+
+        <?php   $amg = array(   'pagename'      => 'home-page-2',);
+                $query_1 = new WP_Query( $amg );
+                if( $query_1->have_posts() ): ?>
+
+                <?php while  ( $query_1->have_posts() ) : $query_1->the_post(); ?>
+                <article id="homepage_ark" >
+                
+		<div class="home-content">
+                        <?php echo get_the_content(); ?>
+                </div><!-- .home-content -->
+
+                <footer class="home-meta">
+                        <?php edit_post_link( __( 'Edit', 'amstraslate' ), '<span class="edit-link">', '</span>' ); ?>
+                </footer><!-- .home-meta -->
+
+                </article><!-- #homepage_ark -->
+                <?php endwhile; ?>
+
+        <?php endif ?>
+
+        </div><!-- IN_FullScreen -->
+</div><!-- #HomePage-2 .FullScreen -->
+
+<div class="FullScreen">
+	<img src="<?php bloginfo('template_directory'); ?>/image/home_imge.png" style="width: 100%;">
+</div>
+
+<div id="HomePage-3" class="FullScreen" style="background-color: #cccccc; height: 600px;">
+        <div class="IN_FullScreen" style="position: relative;top: 50%;transform: translateY(-50%);">
+
+        <?php   $amg = array(   'pagename'      => 'home-page-3',);
+                $query_1 = new WP_Query( $amg );
+                if( $query_1->have_posts() ): ?>
+
+                <?php while  ( $query_1->have_posts() ) : $query_1->the_post(); ?>
+                <article id="homepage_ark" >
+
+                <div class="home-content">
+                        <?php echo get_the_content(); ?>
+                </div><!-- .home-content -->
+
+                <footer class="home-meta">
+                        <?php edit_post_link( __( 'Edit', 'amstraslate' ), '<span class="edit-link">', '</span>' ); ?>
+                </footer><!-- .home-meta -->
+
+                </article><!-- #homepage_ark -->
+                <?php endwhile; ?>
+
+        <?php endif ?>
+
+        </div><!-- IN_FullScreen -->
+</div><!-- #HomePage-2 .FullScreen -->
+
+<?php $args = array(	'cat'		 => 9,
+			'posts_per_page' => 3,);
+	$query = new WP_Query( $args ); ?>	
+<?php if ( $query->have_posts() ): ?>
+<div id="full-screen-news" class="FullScreen" style="width:100%;height: 500px;position: relative;">
+	<img  src="<?php bloginfo('template_directory'); ?>/image/HomePageNews.png"
+	      style="height: 100%;
+                     position: absolute;
+                     left: 50%; transform: translateX(-50%);
+                     top: 0;
+                     filter: grayscale(20%) blur(1px);
+		     -webkit-filter: grayscale(20%) blur(1px);">
+	<div style="opacity: 0.7;
+                    width: 1170px;
+                    height: 490px; 
+                    position: absolute;
+                    top: 50%; left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: white;"></div>
+	<div class="IN_FullScreen" style="position: relative;top: 50%;transform: translateY(-50%);">
+		<article id="homepage_ark">
+			<header class="home-header">
+                	<h1 class="home-title" style="text-align: center;"><?php _e('NEWS','amstraslate') ?></h1>
+                	</header>
+
+			<div id="home-news" class="row" style="margin-top: 30px;">
+
+				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+				<div id="home-new-one" class="col-xs-12 col-sm-4 col-md-4">
+					<article style="padding: 20px 10px; background-color: black; color: white; height: 200px; border-radius: 5px;">
+					<h3><?php the_title(); ?></h3>
+					<?php the_content( __( 'read more ...', 'amstraslate' ) ); ?>
+					</article>
+				</div><!-- #home-new-one -->
+				<?php endwhile; ?>
 
 			</div><!-- home-news -->
-		</div><!-- news -->
-	<?php endif ?>
-</div><!-- full-screen -->
+
+		</article><!-- .homepage_ark -->
+	</div><!-- IN_FullScreen -->
+</div><!-- #full-screen-news .FullScreen -->
+<?php endif ?>
+
+
 <div id="main" class="wrapper">
-	<div id="primary" class="site-content">
-		<div id="content" role="main">
-		<?php if ( have_posts() ) : ?>
-
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() ); ?>
-			<?php endwhile; ?>
-
-			<?php twentytwelve_content_nav( 'nav-below' ); ?>
-
-		<?php else : ?>
-
-			<article id="post-0" class="post no-results not-found">
-
-			<?php if ( current_user_can( 'edit_posts' ) ) :
-				// Show a different message to a logged-in user who can add posts.
-			?>
-				<header class="entry-header">
-					<h1 class="entry-title"><?php _e( 'No posts to display', 'amstraslate' ); ?></h1>
-				</header>
-
-				<div class="entry-content">
-					<p><?php printf( __( 'Ready to publish your first post? <a href="%s">Get started here</a>.', 'amstraslate' ), admin_url( 'post-new.php' ) ); ?></p>
-				</div><!-- .entry-content -->
-
-			<?php else :
-				// Show the default message to everyone else.
-			?>
-				<header class="entry-header">
-					<h1 class="entry-title"><?php _e( 'Nothing Found', 'twentytwelve' ); ?></h1>
-				</header>
-
-				<div class="entry-content">
-					<p><?php _e( 'Apologies, but no results were found. Perhaps searching will help find a related post.', 'amstraslate' ); ?></p>
-					<?php get_search_form(); ?>
-				</div><!-- .entry-content -->
-			<?php endif; // end current_user_can() check ?>
-
-			</article><!-- #post-0 -->
-
-		<?php endif; // end have_posts() check ?>
-
-		</div><!-- #content -->
-	</div><!-- #primary -->
 
 <?php if( ! is_home() ): ?>
 	<?php get_sidebar(); ?>

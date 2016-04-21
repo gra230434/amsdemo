@@ -3,9 +3,6 @@
 	body {
 		background-color: #e6e6e6;
 	}
-	body .site {
-		border-radius: 5px 5px 0px 0px;
-	}
 	body.custom-background-empty {
 		background-color: #fff;
 	}
@@ -24,10 +21,12 @@
 	.wrapper {
 		width: 1020px;
 		margin: 0px auto;
-		padding-top: 50px;
-		padding-bottom: 50px;
 	}
-
+	/* AMStheme in home page*/
+	.IN_FullScreen {
+		width: 1020px;
+                margin: 0px auto;
+	}
 	.site-footer-inner {
 		width: 1020px;
 		margin: 0px auto;

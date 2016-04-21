@@ -25,7 +25,11 @@ a {
 	text-decoration: none;
 }
 body {
+	font-family: "Microsoft JhengHei", "Open Sans", Helvetica, Arial, sans-serif;
+	font-size: 16px;
 	line-height: 1;
+	text-rendering: optimizeLegibility;
+	color: #444;
 }
 ol,
 ul {
@@ -60,6 +64,12 @@ h5,
 h6 {
 	clear: both;
 }
+h1 {font-size: 36px;}
+h2 {font-size: 30px;}
+h3 {font-size: 24px;}
+h4, p {font-size: 18px; line-height: 1.7;}
+h5 {font-size: 16px;}
+h6 {font-size: 14px;}
 html {
 	overflow-y: scroll;
 	font-size: 100%;
@@ -143,12 +153,20 @@ hgroup {
 
 /* =Repeatable patterns
 -------------------------------------------------------------- */
-/* header title */
+/* sreen set ------------------------------------------------- */
+.FullScreen {
+	width: 100%;
+}
+.IN_FullScreen {
+	width: 90%;
+	margin: 0px auto;
+}
+/* header title ---------------------------------------------- */
 .header-fixed{
-	height: 46px;
-  width: 100%;
-  position: fixed;
-  background-color: #e6e6e6;
+	height: 40px;
+  	width: 100%;
+  	position: fixed;
+  	background-color: #e6e6e6;
 	z-index: 500;
 	box-shadow: 0px 2px 2px #82BAF7;
 }
@@ -186,8 +204,6 @@ hgroup {
 	opacity: 0.8;
 	border-radius: 10px
 }
-
-
 .site-title {
 	display: inline-block;
 }
@@ -200,15 +216,6 @@ hgroup {
 }
 #homepage_ark {
 	font-family: "Microsoft JhengHei", "Open Sans", Helvetica, Arial, sans-serif;
-	font-size: 16px;
-}
-#homepage_ark .home-title{
-	font-size: 24px;
-	padding: 10px 0px;
-}
-.home-content {
-	margin: 50px 0px;
-	line-height: 1.5;
 }
 .link_to_box {
 	margin: 30px 0px;
@@ -229,6 +236,7 @@ hgroup {
 	position: absolute;
 	top: 0px;
 	left: 0px;
+
 }
 .whatis_left_img {
 	width: 120px;
@@ -270,12 +278,11 @@ hgroup {
 /* whatis div */
 .whatis_div {
 	width: 300px;
-	margin: 80px auto;
 }
 .whatis_center_div{
 	width: 300px;
 	height: 120px;
-	margin: 20px auto;
+	margin: 30px auto;
 }
 .whatis_img {
 	width: 120px;
@@ -296,7 +303,7 @@ hgroup {
 	width: 180px;
 	height: 120px;
 	float: left;
-	font-size: 18px;
+	margin-left: 30px;
 }
 /* home news */
 .news {
@@ -552,7 +559,7 @@ img.wp-smiley,
 }
 
 /*header image*/
-.header_image_long {
+.header_image {
 	background-image: url( "../amsdemo/image/homepage_1.jpg" );
 	background-repeat: no-repeat;
 	background-position: center;
@@ -622,12 +629,6 @@ img.wp-smiley,
 html {
 	font-size: 87.5%;
 }
-body {
-	font-size: 14px;
-	font-family: "Microsoft JhengHei", "Open Sans", Helvetica, Arial, sans-serif;
-	text-rendering: optimizeLegibility;
-	color: #444;
-}
 body.custom-font-enabled {
 	font-family: "Microsoft JhengHei", "Open Sans", Helvetica, Arial, sans-serif;
 }
@@ -671,7 +672,7 @@ a:hover {
 /* Page structure */
 .site {
 	background-color: #e6e6e6;
-	padding-top: 48px;
+	padding-top: 40px;
 }
 .site-content {
 	margin: 24px 0 0;
@@ -683,31 +684,30 @@ a:hover {
 /* Header */
 .site-header {
 	padding: 0px 40px;
+	height: 100%;
 }
-.site-header h1,
-.site-header h2,
-.main-navigation li a {
-	line-height: 40px;
+.site-header-title {
+	width: 85px;
+	height: 40px;
+	float: left;
+	margin-right: 20px;
 }
-.site-header h1 a,
-.site-header h2 a {
+.site-header a {
 	color: #515151;
 	display: inline-block;
-	text-decoration: none;
 }
-.site-header h1 a:hover,
-.site-header h2 a:hover {
+.site-header a:hover {
 	color: #21759b;
+	text-decoration: none;
 }
 .site-header h1 {
 	font-size: 24px;
-	float: left;
 }
 .site-header h2 {
 	font-weight: normal;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 20px;
-	margin-top: 20px;
+	margin-top: 15px;
 	color: #757575;
 }
 .header-image {
@@ -1522,7 +1522,7 @@ a.comment-edit-link:hover {
 	border-right-width: 0px;
 	padding-right: 0px;
 	font-size: 12px;
-	height: 19.5px;
+	height: 34px;
 	width: 180px;
 }
 #searchsubmit{
