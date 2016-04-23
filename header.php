@@ -34,8 +34,12 @@
 <body <?php body_class(); ?>>
 <div id="header-fixed" class="header-fixed">
 	<div id="masthead" class="site-header" role="banner">
-		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-		<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+		<h1 class="site-header-title">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+			<?php bloginfo( 'name' ); ?>
+			</a>
+		</h1><!-- .site-header-title -->
+		<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2><!-- .site-description -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle"><?php _e( 'Menu', 'amstraslate' ); ?></button>
@@ -49,15 +53,38 @@
 		<?php if ( get_header_image() ) : ?>
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>" class="header-image" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" /></a>
 		<?php endif; ?>
-<?php //is_home()||is_category()||is_page() ?>
-	<?php if ( is_home()||is_category()||is_page() ) : ?>
-		<div class="header_image_long">
+
+	<?php if ( is_home()||is_front_page() ) : ?>
+		<script type="text/javascript">
+		var $ = jQuery.noConflict();
+		var window_height = window.innerHeight;
+	
+		$(document).ready(function(){
+		  $("#header_image_to").click(function(){
+		    $(window).scrollTop( window_height );
+		  });
+		});
+		</script>
+		<div class="header_image">
 			<div class="header_image_box">
-				<div class="header_image_background"></div>
-			<?php dynamic_sidebar( 'sidebar-2' ); ?>
-		  </div><!-- .header_image_box -->
-		</div><!-- .header_image_long -->
+
+				<div class="header_image_text">
+					<h1 style="text-align: center;color: rgb(0, 121, 199);font-weight: 600;">WELCOME TO AMS</h1>
+					<p style="text-align: center; margin: 15px auto 0;width: 600px;">The Alpha Magnetic Spectrometer will study the universe and its origin by searching for antimatter, dark matter while performing precision measurements of cosmic rays composition and flux.</p>
+
+					<div class="header_image_down">
+						<div class="header_image_down_big">
+							<div class="header_image_down_line"></div>
+						</div>
+						<button id="header_image_to"></button>
+						<div class="header_image_down_big">
+							<div class="header_image_down_line"></div>
+                                                </div>
+					</div>
+				</div><!-- header_image_text -->
+
+			</div><!-- header_image_opacity -->
+		</div><!-- .header_image -->
 	<?php endif; ?>
 
-	<div id="background-white" class="background">
 	<div id="main" class="wrapper">

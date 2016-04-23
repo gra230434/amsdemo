@@ -3,9 +3,6 @@
 	body {
 		background-color: #e6e6e6;
 	}
-	body .site {
-		border-radius: 5px 5px 0px 0px;
-	}
 	body.custom-background-empty {
 		background-color: #fff;
 	}
@@ -20,18 +17,48 @@
 		width: 90%;
 		margin: 0px auto;
 	}
-	.header_image_long {
-		height: 530px;
-	}
+
 	.wrapper {
 		width: 1020px;
-	  margin: 0px auto;
+		margin: 0px auto;
+		padding: 0;
+	}
+	/* AMStheme in home page*/
+	.IN_FullScreen {
+		width: 1020px;
+                margin: 0px auto;
 	}
 	.site-footer-inner {
 		width: 1020px;
 		margin: 0px auto;
 	}
 	.footer_video {
-        width: 30%;
-}
+        	width: 30%;
+	}
+	/* header_image */
+	.header_image_text {
+		width: 800px;
+	}
+	/* whatis */
+	.whatis_div {
+        	width: 1020px;
+	}
+	.whatis_center_div{
+	        width: 600px;
+	}
+	.whatis_center_info {
+        	width: 450px;
+		margin-left: 30px;
+	}
+	/* home news */
+	.home-news {
+	margin: 15px;
+	}
+	.home-new-one {
+        width: 300px;
+        height: 250px;
+        float: left;
+        background-color: gray;
+        margin: 0px 15px;
+	}
 }

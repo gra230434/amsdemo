@@ -116,6 +116,10 @@ function twentytwelve_scripts_styles() {
 		wp_enqueue_style( 'amstheme-fonts', esc_url_raw( $font_url ), array(), null );
 
 	// Loads our main stylesheet.
+	// Bootstrap
+        wp_enqueue_style( 'BootstrapCDN', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css');
+        wp_enqueue_script( 'BootstrapCDNjs', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', array(), Null, False);
+
 	// master
 	wp_enqueue_style( 'amstheme-style', get_stylesheet_uri() );
 	// min-width: 600px
