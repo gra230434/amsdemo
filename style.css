@@ -161,9 +161,12 @@ hgroup {
 	width: 90%;
 	margin: 0px auto;
 }
+<<<<<<< HEAD
 .wrapper {
 	background-color: white;
 }
+=======
+>>>>>>> origin/master
 /* header title ---------------------------------------------- */
 .header-fixed{
 	height: 40px;
@@ -213,12 +216,17 @@ hgroup {
 	position: relative;
 	float: left;
 }
+<<<<<<< HEAD
 .header_image_down_line {
 	width:100%;
 	height:3px;
 	background: #4d4d4d;
 	position: absolute;
 	top: 50%; transform: translateY(-50%);
+=======
+.site-title {
+	display: inline-block;
+>>>>>>> origin/master
 }
 #header_image_to {
 	float: left;
@@ -576,6 +584,18 @@ img.wp-smiley,
 .gallery-columns-1 .gallery-icon img {
 	padding: 3%;
 }
+<<<<<<< HEAD
+=======
+
+/*header image*/
+.header_image {
+	background-image: url( "../amsdemo/image/homepage_1.jpg" );
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+>>>>>>> origin/master
 /* Navigation */
 .site-content nav {
 	clear: both;
@@ -681,7 +701,11 @@ a:hover {
 
 /* Page structure */
 .site {
+<<<<<<< HEAD
 	background-color: #fff;
+=======
+	background-color: #e6e6e6;
+>>>>>>> origin/master
 	padding-top: 40px;
 }
 .site-content {
@@ -696,6 +720,15 @@ a:hover {
 	padding: 0px 40px;
 	height: 100%;
 }
+<<<<<<< HEAD
+=======
+.site-header-title {
+	width: 85px;
+	height: 40px;
+	float: left;
+	margin-right: 20px;
+}
+>>>>>>> origin/master
 .site-header a {
 	color: #515151;
 	display: inline-block;
@@ -706,15 +739,24 @@ a:hover {
 }
 .site-header h1 {
 	font-size: 24px;
+<<<<<<< HEAD
 	width: 85px;
         height: 40px;
         display: inline;
         margin-right: 5px;
+=======
+>>>>>>> origin/master
 }
 .site-header h2 {
 	width: 150px;
 	font-weight: normal;
+<<<<<<< HEAD
 	font-size: 18px;
+=======
+	font-size: 16px;
+	line-height: 20px;
+	margin-top: 15px;
+>>>>>>> origin/master
 	color: #757575;
 	display: inline;
 }

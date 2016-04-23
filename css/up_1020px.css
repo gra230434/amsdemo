@@ -21,7 +21,10 @@
 	.wrapper {
 		width: 1020px;
 		margin: 0px auto;
+<<<<<<< HEAD
 		padding: 0;
+=======
+>>>>>>> origin/master
 	}
 	/* AMStheme in home page*/
 	.IN_FullScreen {
@@ -35,10 +38,13 @@
 	.footer_video {
         	width: 30%;
 	}
+<<<<<<< HEAD
 	/* header_image */
 	.header_image_text {
 		width: 800px;
 	}
+=======
+>>>>>>> origin/master
 	/* whatis */
 	.whatis_div {
         	width: 1020px;

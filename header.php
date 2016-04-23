@@ -34,12 +34,24 @@
 <body <?php body_class(); ?>>
 <div id="header-fixed" class="header-fixed">
 	<div id="masthead" class="site-header" role="banner">
+<<<<<<< HEAD
 		<h1 class="site-header-title">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 			<?php bloginfo( 'name' ); ?>
 			</a>
 		</h1><!-- .site-header-title -->
 		<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2><!-- .site-description -->
+=======
+		<div class="site-header-title">
+		<h1>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+			<?php bloginfo( 'name' ); ?>
+			</a>
+		</h1>
+		</div><!-- site-header-title -->
+
+		<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+>>>>>>> origin/master
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle"><?php _e( 'Menu', 'amstraslate' ); ?></button>
@@ -53,6 +65,7 @@
 		<?php if ( get_header_image() ) : ?>
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>" class="header-image" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" /></a>
 		<?php endif; ?>
+<<<<<<< HEAD
 
 	<?php if ( is_home()||is_front_page() ) : ?>
 		<script type="text/javascript">
@@ -84,6 +97,15 @@
 				</div><!-- header_image_text -->
 
 			</div><!-- header_image_opacity -->
+=======
+<?php //is_home()||is_category()||is_page() ?>
+	<?php if ( is_home()||is_front_page() ) : ?>
+		<div class="header_image">
+			<div class="header_image_box">
+				<div class="header_image_background"></div>
+			<?php dynamic_sidebar( 'sidebar-2' ); ?>
+		  </div><!-- .header_image_box -->
+>>>>>>> origin/master
 		</div><!-- .header_image -->
 	<?php endif; ?>
 
