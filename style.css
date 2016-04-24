@@ -160,29 +160,29 @@ hgroup {
 .IN_FullScreen {
 	width: 90%;
 	margin: 0px auto;
+	position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
-<<<<<<< HEAD
 .wrapper {
 	background-color: white;
 }
-=======
->>>>>>> origin/master
 /* header title ---------------------------------------------- */
 .header-fixed{
 	height: 40px;
-  	width: 100%;
-  	position: fixed;
-  	background-color: #e6e6e6;
+  width: 100%;
+  position: fixed;
+  background-color: #e6e6e6;
 	z-index: 500;
 	box-shadow: 0px 2px 2px #82BAF7;
 }
 
 /*header image*/
 .header_image {
-        background-image: url( "../amsdemo/image/homepage_1.jpg" );
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+  background-image: url( "../amsdemo/image/homepage_1.jpg" );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 	height: calc(100vh - 40px);
 }
 .header_image_box {
@@ -191,7 +191,7 @@ hgroup {
 	position: absolute;
 	bottom: 55px;
 	background-color: rgba(255, 255, 255, 0.7)
-	}
+}
 .header_image_text {
 	width: 300px;
 	position: absolute;
@@ -199,11 +199,11 @@ hgroup {
 	transform: translate(-50%, -50%);
 }
 .header_image_text h1{
-        font-size: 28px;
-        }
+  font-size: 28px;
+}
 .header_image_text p{
-        display: none;
-        }
+  display: none;
+}
 .header_image_down {
 	width: 100%;
 	height :50px;
@@ -216,17 +216,15 @@ hgroup {
 	position: relative;
 	float: left;
 }
-<<<<<<< HEAD
 .header_image_down_line {
 	width:100%;
 	height:3px;
 	background: #4d4d4d;
 	position: absolute;
 	top: 50%; transform: translateY(-50%);
-=======
+}
 .site-title {
 	display: inline-block;
->>>>>>> origin/master
 }
 #header_image_to {
 	float: left;
@@ -244,110 +242,163 @@ hgroup {
 #homepage_ark {
 	font-family: "Microsoft JhengHei", "Open Sans", Helvetica, Arial, sans-serif;
 }
-.link_to_box {
-	margin: 30px 0px;
+#homepage_ark h2 {
+	text-align: center;
+}
+.FullScreen_homepage3 {
+	background-image: url("../amsdemo/image/home_imge.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+  background-position: center;
 	position: relative;
-	height: 600px;
-	background-color:#e6e6e6;
-	border-radius: 5px;
+	height: 800px;
 }
-.link_to_box h2 {
-	font-size: 18px;
-}
-.link_to_box p {
-	margin-top: 10px;
-}
-.whatis_left{
-	width: 300px;
-	padding: 30px;
+.IN_FullScreen_homepage3{
+	width: 100%;
+	height: 550px;
+	background-color: rgba(255, 255, 255, 0.8);
 	position: absolute;
-	top: 0px;
-	left: 0px;
-
+	bottom: 0;
 }
-.whatis_left_img {
-	width: 120px;
-	height: 120px;
-	margin: auto;
-}
-.whatis_left_info {
-	margin-top: 20px
-}
-.link_to_circle {
-	float: left;
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
-	background-color: white;
-	border: 10px black solid;
-}
-.link_to_img {
-	margin: 10px;
-	border-radius: 0px;
-	box-shadow: 0 0 0 white;
-}
-.whatis_right {
-	display: none;
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	color: #bcbcbc;
-}
-.whatis_right_link {
-	position: relative;
-	height: 110px;
-	padding: 20px;
-	background-color: #383838;
-}
-.whatis_right_link:hover {
-	background-color: #585858;
-}
-/* whatis div */
-.whatis_div {
-	width: 300px;
-}
-.whatis_center_div{
-	width: 300px;
-	height: 120px;
+.homepage_info {
+	width: 90%;
+	height: 140px;
 	margin: 30px auto;
 }
-.whatis_img {
-	width: 120px;
-	height: 120px;
-	margin: 0px;
-	float: left;
-}
-.link_to_circle {
-	float: left;
+.homepage_info_img {
 	width: 120px;
 	height: 120px;
 	border-radius: 50%;
-	background-color: white;
-	border: 10px black solid;
-	margin: 0px auto;
-} 
-.whatis_center_info {
-	width: 180px;
+	margin: 0px;
+	border: 3px black solid;
+	background-image: url('http://amsdemo.phy.ncu.edu.tw/wp-content/uploads/2016/03/books.png');
+	background-size: 80px 80px;
+	background-repeat: no-repeat;
+	background-position: center;
+	float: left;
+	display: none;
+}
+.homepage_info_text {
+	width: 100%;
 	height: 120px;
 	float: left;
-	margin-left: 30px;
+	padding-left: 30px;
 }
+.homepage_adoutmember {
+	width: 90%;
+	margin: 0 auto;
+}
+.homepage_adoutams_background, .homepage_adoutmember_background {
+	height: 66px;
+	padding: 10px;
+	border: 1px white solid;
+	position: relative;
+}
+.homepage_adoutams_background:before, .homepage_adoutmember_background:before {
+	content: " ";
+	height: 80%;
+	width: 2px;
+	background-color: #323941;
+	position: absolute;
+	top: 10%;
+	left: -1px;
+}
+.homepage_adoutams_background:after, .homepage_adoutmember_background:after {
+	content: " ";
+	height: 80%;
+	width: 2px;
+	background-color: #323941;
+	position: absolute;
+	top: 10%;
+	right: -1px;
+}
+.homepage_adoutams_background {
+	background-color: rgba(102, 133, 173, 0.2);
+	color: white;
+}
+.homepage_adoutmember_background {
+	background-color: rgba(0, 0, 0, 0.2);
+	color: white;
+}
+
+.homepage_BOX {
+	margin: 10px 5px;
+	height: calc(100% - 20px);
+	overflow: hidden;
+}
+.homepage_BOX h3 {
+	text-align: center;
+}
+.homepage_BOX p {
+	display: none;
+}
+
 /* home news */
-.news {
-	width: 100%;
+.homepage_news{
+	background-color: #2C4C5D;
+	height: 450px;
 }
-.news h1 {
-	font-size: 20px;
-}
-.news p {
-	font-size: 16px;
+.home-news {
+	height: 450px;
 }
 .home-new-one {
-	width: 30%;
-	height: 200px;
+	width: 33.3%;
 	float: left;
-	background-color: gray;
-	margin: 10px 10px;
+}
+.homepage_news_title {
+	height: 170px;
+	width: 100%;
+	position: relative;
+	bottom: 50%;
+	margin-bottom: -31px;
+	padding: 30px 0;
+	background: rgba(255,255,255,1);
+	-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15);
+	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15);
+}
+.homepage_news_title::after {
+	content: '';
+	width: 0;
+	height: 0;
+	border-top: 15px solid #fff;
+	border-top: 15px solid rgba(255,255,255,15);
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	position: absolute;
+	float: left;
+	left: 50%;
+	bottom: -14px;
+	margin-left: -20px;
+}
+.homepage_news_title h3 {
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	top: 50%; left: 50%; transform: translate(-50%, -50%);
+}
+.homepage_news_content {
+	background-color: rgba(57, 86, 131, 0.7);
+	color: white;
+	height: 311px;
+  padding: 70px 20px 30px;
+}
+.homepage_news_content_p {
+	height: 184px;
+  overflow: hidden;
+}
+.homepage_news_content_p p {
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+.homepage_news_content span {
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	margin: 15px 0px;
+	float: right;
+}
+.homepage_news_content a {
+	color: #229bd2;
+	font-weight: 600;
 }
 
 /* Small headers */
@@ -584,8 +635,6 @@ img.wp-smiley,
 .gallery-columns-1 .gallery-icon img {
 	padding: 3%;
 }
-<<<<<<< HEAD
-=======
 
 /*header image*/
 .header_image {
@@ -594,8 +643,6 @@ img.wp-smiley,
 	background-position: center;
 	background-size: cover;
 }
-
->>>>>>> origin/master
 /* Navigation */
 .site-content nav {
 	clear: both;
@@ -651,7 +698,6 @@ img.wp-smiley,
 	margin-top: 0;
 }
 
-
 /* =Basic structure
 -------------------------------------------------------------- */
 
@@ -701,11 +747,7 @@ a:hover {
 
 /* Page structure */
 .site {
-<<<<<<< HEAD
 	background-color: #fff;
-=======
-	background-color: #e6e6e6;
->>>>>>> origin/master
 	padding-top: 40px;
 }
 .site-content {
@@ -720,15 +762,15 @@ a:hover {
 	padding: 0px 40px;
 	height: 100%;
 }
-<<<<<<< HEAD
-=======
+
+
 .site-header-title {
 	width: 85px;
 	height: 40px;
 	float: left;
 	margin-right: 20px;
 }
->>>>>>> origin/master
+
 .site-header a {
 	color: #515151;
 	display: inline-block;
@@ -739,24 +781,24 @@ a:hover {
 }
 .site-header h1 {
 	font-size: 24px;
-<<<<<<< HEAD
+
 	width: 85px;
         height: 40px;
         display: inline;
         margin-right: 5px;
-=======
->>>>>>> origin/master
+
+
 }
 .site-header h2 {
 	width: 150px;
 	font-weight: normal;
-<<<<<<< HEAD
+
 	font-size: 18px;
-=======
+
 	font-size: 16px;
 	line-height: 20px;
 	margin-top: 15px;
->>>>>>> origin/master
+
 	color: #757575;
 	display: inline;
 }

@@ -31,10 +31,7 @@
 	}
 	.site-header h1 {
 		font-size: 38px;
-<<<<<<< HEAD
-=======
 		margin-right: 20px;
->>>>>>> origin/master
 	}
 
 	.main-navigation ul.nav-menu,
@@ -162,13 +159,10 @@
 	.commentlist .children {
 		margin-left: 48px;
 	}
-<<<<<<< HEAD
-=======
 	/*header image*/
 	.header_image {
 		height: calc(100vh - 40px);
 	}
->>>>>>> origin/master
 	.background-image {
 		background-color: white;
 		padding-top: 150px;
@@ -176,33 +170,39 @@
 		display: block;
 		border-top: 5px solid rgb(230, 92, 0);
 	}
-<<<<<<< HEAD
 	/* header_image */
 	.header_image_box {
 		height: 265px;
 	}
-        .header_image_text {
-                width: 600px;
-        }
+  .header_image_text {
+    width: 600px;
+  }
 	.header_image_text h1{
-                font-size: 36px;
-        }
+    font-size: 36px;
+  }
 	.header_image_text p{
-                display: block;
-        }
-=======
->>>>>>> origin/master
+    display: block;
+  }
 	/* home page */
-	.link_to_box {
-		max-width: 980px;
+	.homepage_info{
+		width: 580px;
 	}
-	.whatis_div {
-		width: calc(100% - 20px);
+	.homepage_info_img {
+		display: block;
 	}
-	.whatis_center_div {
-		width: 500px;
+	.homepage_adoutmember {
+		width: 80%;
 	}
-	.whatis_center_info {
-		width: 350px;
+	.homepage_info_text {
+		width: calc(100% - 120px);
+	}
+	.homepage_adoutams_background {
+		height: 260px;
+	}
+	.homepage_adoutmember_background{
+		height: 180px;
+	}
+	.homepage_BOX p {
+		display: block;
 	}
 }

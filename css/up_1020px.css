@@ -1,5 +1,5 @@
-/* Minimum width of 1020 pixels. */
-@media screen and (min-width: 1025px) {
+/* Minimum width of 1100 pixels. */
+@media screen and (min-width: 1100px) {
 	body {
 		background-color: #e6e6e6;
 	}
@@ -17,20 +17,17 @@
 		width: 90%;
 		margin: 0px auto;
 	}
-
-	.wrapper {
-		width: 1020px;
-		margin: 0px auto;
-<<<<<<< HEAD
-		padding: 0;
-=======
->>>>>>> origin/master
-	}
 	/* AMStheme in home page*/
 	.IN_FullScreen {
 		width: 1020px;
-                margin: 0px auto;
+    margin: 0px auto;
 	}
+	.wrapper {
+		width: 1020px;
+		margin: 0px auto;
+		padding: 0;
+	}
+	/* ------------------------------ */
 	.site-footer-inner {
 		width: 1020px;
 		margin: 0px auto;
@@ -38,33 +35,19 @@
 	.footer_video {
         	width: 30%;
 	}
-<<<<<<< HEAD
 	/* header_image */
 	.header_image_text {
 		width: 800px;
 	}
-=======
->>>>>>> origin/master
-	/* whatis */
-	.whatis_div {
-        	width: 1020px;
+	/* home page */
+	.homepage_info{
+		width: 800px;
 	}
-	.whatis_center_div{
-	        width: 600px;
-	}
-	.whatis_center_info {
-        	width: 450px;
-		margin-left: 30px;
+	.homepage_info_text {
+		width: 680px;
 	}
 	/* home news */
-	.home-news {
-	margin: 15px;
-	}
-	.home-new-one {
-        width: 300px;
-        height: 250px;
-        float: left;
-        background-color: gray;
-        margin: 0px 15px;
+	.homepage_adoutmember {
+		width: 800px;
 	}
 }
