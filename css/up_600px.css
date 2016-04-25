@@ -205,4 +205,11 @@
 	.homepage_BOX p {
 		display: block;
 	}
+	.home-new-one {
+		width: 33.3333%;
+	}
+	/* footer video */
+	.footer_video {
+		width: 50%;
+	}
 }

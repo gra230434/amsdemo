@@ -290,34 +290,49 @@ hgroup {
 }
 .homepage_adoutams_background, .homepage_adoutmember_background {
 	height: 66px;
-	padding: 10px;
-	border: 1px white solid;
 	position: relative;
 }
-.homepage_adoutams_background:before, .homepage_adoutmember_background:before {
-	content: " ";
-	height: 80%;
-	width: 2px;
-	background-color: #323941;
-	position: absolute;
-	top: 10%;
-	left: -1px;
+.homepage_adoutams_background:before {
+	left: -2px;
 }
-.homepage_adoutams_background:after, .homepage_adoutmember_background:after {
+.homepage_adoutams_background:after {
+	right: -2px;
+}
+.homepage_adoutams_background:before, .homepage_adoutams_background:after {
 	content: " ";
+	background-color: rgb(38, 38, 38);
 	height: 80%;
 	width: 2px;
-	background-color: #323941;
 	position: absolute;
 	top: 10%;
-	right: -1px;
 }
 .homepage_adoutams_background {
-	background-color: rgba(102, 133, 173, 0.2);
+	background-color: #323941;
+	border: 2px white solid;
+  padding: 10px;
 	color: white;
 }
+.homepage_adoutmember_background:before {
+	border-left: 2px red solid;
+	left: -10px;
+}
+.homepage_adoutmember_background:after {
+	border-right: 2px red solid;
+	right: -10px;
+}
+.homepage_adoutmember_background:before, .homepage_adoutmember_background:after {
+	content: " ";
+	height: calc(100% + 4px);
+	width: 10px;
+	background-color: rgba(0, 0, 0, 0.7);
+	border-top: 2px red solid;
+	border-bottom: 2px red solid;
+	position: absolute;
+	top: -2px;
+}
 .homepage_adoutmember_background {
-	background-color: rgba(0, 0, 0, 0.2);
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 10px 0;
 	color: white;
 }
 
@@ -342,7 +357,7 @@ hgroup {
 	height: 450px;
 }
 .home-new-one {
-	width: 33.3%;
+	width: 100%;
 	float: left;
 }
 .homepage_news_title {
@@ -874,7 +889,8 @@ section[role="banner"] {
 	width: 53.66666666666%; /* define a width to avoid dropping a wider submit button */
 }
 
-/* Footer */
+/* Footer
+-------------------------------------------------------------- */
 .site-footer {
 	max-width: 100%;
 	padding: 50px 0px 100px;
@@ -883,15 +899,14 @@ section[role="banner"] {
 	margin: 0px auto;
 }
 .footer_widgets_area {
+	margin-top: 10px;
 	width: 100%;
 }
-
 .footer_video {
 	float: left;
-	padding-left: 1%;
-	padding-right: 1%;
-	margin-bottom: 20px;
-	width: 70%;
+	width: 100%;
+	margin: 0 auto 20px;
+	padding: 0 15px;
 }
 .footer_video .widget-title {
 	color: white;
