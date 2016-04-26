@@ -33,7 +33,9 @@
 		font-size: 38px;
 		margin-right: 20px;
 	}
-
+	.site-header h2 {
+		display: inline-block;
+	}
 	.main-navigation ul.nav-menu,
 	.main-navigation div.nav-menu > ul {
 		display: inline-block !important;
@@ -194,7 +196,7 @@
 		width: 80%;
 	}
 	.homepage_info_text {
-		width: calc(100% - 120px);
+		width: calc(100% - 150px);
 	}
 	.homepage_adoutams_background {
 		height: 260px;

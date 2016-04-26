@@ -40,11 +40,14 @@
 		width: 800px;
 	}
 	/* home page */
+	.home-content {
+		width: 850px;
+	}
 	.homepage_info{
-		width: 800px;
+		width: 600px;
 	}
 	.homepage_info_text {
-		width: 680px;
+		width: 450px;
 	}
 	/* home news */
 	.homepage_adoutmember {
