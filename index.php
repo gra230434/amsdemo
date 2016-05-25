@@ -42,6 +42,11 @@ get_header(); ?>
 	</div><!-- IN_FullScreen -->
 </div><!-- HomePage-1 FullScreen -->
 
+<script type="text/javascript">
+  var height = $("#HomePage-1").offset();
+  console.log( height.top );
+</script>
+
 <div id="HomePage-2" class="FullScreen" style="background-color: #262626; height: 700px;color: white;">
         <div class="IN_FullScreen">
 

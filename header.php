@@ -32,6 +32,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+
 <div id="header-fixed" class="header-fixed">
 	<div id="masthead" class="site-header" role="banner">
 		<h1 class="site-header-title">
@@ -40,21 +41,13 @@
 			</a>
 		</h1><!-- .site-header-title -->
 		<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2><!-- .site-description -->
-		<div class="site-header-title">
-		<h1>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-			<?php bloginfo( 'name' ); ?>
-			</a>
-		</h1>
-		</div><!-- site-header-title -->
-
-		<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle"><?php _e( 'Menu', 'amstraslate' ); ?></button>
 			<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'amstraslate' ); ?>"><?php _e( 'Skip to content', 'amstraslate' ); ?></a>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
+
 	</div><!-- #masthead .site-header -->
 </div><!-- #header-fixed .header-fixed -->
 
@@ -66,13 +59,23 @@
 	<?php if ( is_home()||is_front_page() ) : ?>
 		<script type="text/javascript">
 		var $ = jQuery.noConflict();
-		var window_height = window.innerHeight;
+		/*var window_height = window.innerHeight;
 
 		$(document).ready(function(){
 		  $("#header_image_to").click(function(){
 		    $(window).scrollTop( window_height );
+
 		  });
-		});
+		});*/
+		$(document).ready(function () {
+			    var hoem1_height = $("#HomePage-1").offset();
+					$('#header_image_to').click(function() {
+							$('html, body').animate({
+									scrollTop:hoem1_height.top
+							}, 900);
+							return false;
+					});
+			});
 		</script>
 		<div class="header_image">
 			<div class="header_image_box">
@@ -92,19 +95,12 @@
             </div>
 
 					</div>
-				</div><!-- header_image_text -->
-			</div><!-- header_image_opacity -->
+				</div><!-- .header_image_text -->
+			</div><!-- .header_image_opacity -->
 
-<?php //is_home()||is_category()||is_page() ?>
-	<?php if ( is_home()||is_front_page() ) : ?>
-		<div class="header_image">
-
-			<div class="header_image_box">
-				<div class="header_image_background"></div>
-			<?php dynamic_sidebar( 'sidebar-2' ); ?>
-		  </div><!-- .header_image_box -->
-
+		  <div class="header_image_background"></div>
 		</div><!-- .header_image -->
-	<?php endif; ?>
+
+<?php endif; ?>
 
 	<div id="main" class="wrapper">
